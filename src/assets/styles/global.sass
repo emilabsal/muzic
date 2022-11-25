@@ -1,3 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap')
+
 *
   margin: 0
   padding: 0
+  box-sizing: border-box
+  font-family: 'Inter', sans-serif
+  color: #2A2A2D
+
+body
+  background-color: #F6F7FF
+
+.container
+  max-width: 1442px
+  padding: 0 16px
+  width: 100%
+  margin: 0 auto
+  +xs()
+    padding: 0 24px
+
+ul
+  display: flex
+  list-style-type: none
+
+a
+  text-decoration: none
+
+img
+  max-width: 100%
+  flex-shrink: 0
+
+svg
+  flex-shrink: 0
+
+button
+  background-color: transparent
+  border: none
+  outline: none
