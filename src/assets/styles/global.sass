@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap')
+@import './components/variables'
+@import './components/typography'
 
 *
   margin: 0
@@ -7,8 +9,9 @@
   font-family: 'Inter', sans-serif
   color: #2A2A2D
 
-body
-  background-color: #F6F7FF
+html, body
+  background-color: $background
+  overflow-x: hidden
 
 .container
   max-width: 1442px
@@ -36,3 +39,4 @@ button
   background-color: transparent
   border: none
   outline: none
+  cursor: pointer

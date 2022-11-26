@@ -4,8 +4,11 @@ module.exports = defineConfig({
   css: {
     loaderOptions: {
       sass: {
-        additionalData: `@import "@/assets/styles/components/_variables.sass"`,
-        additionalData: `@import "@/assets/styles/components/_media.sass"`,
+        additionalData: `
+        @import "@/assets/styles/components/_variables.sass" 
+        @import "@/assets/styles/components/_media.sass"
+        @import "@/assets/styles/components/_mixins.sass"
+        `,
       },
     },
   },

@@ -4,7 +4,7 @@
       <router-link to="/">
         <img src="@/assets/images/logo.svg" alt="logo" />
       </router-link>
-      <p class="footer-policy">Политика конфиденциальности</p>
+      <p class="footer-policy typography-link">Политика конфиденциальности</p>
     </div>
   </footer>
 </template>
@@ -16,21 +16,18 @@ export default {};
 <style lang="sass" scoped>
 .footer
   padding: 23px 0
-  background-color: #fff
+  background-color: $light
+  min-height: 114px
+  +flex()
   +xs()
     padding: 20px 0
+    min-height: initial
   &-inner
-    display: flex
-    align-items: center
-    justify-content: space-between
+    +flex($jc: space-between)
     +xs()
       flex-direction: column
       justify-content: center
       gap: 20px
   &-policy
-    font-size: 16px
-    line-height: 160%
-    letter-spacing: -4%
-    +xs()
-      font-size: 12px
+    color: $policy
 </style>

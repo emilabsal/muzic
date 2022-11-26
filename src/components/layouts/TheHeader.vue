@@ -7,7 +7,7 @@
       <nav class="header-menu">
         <ul class="header-list">
           <li v-for="(link, index) in links" :key="index">
-            <router-link class="header-link" to="/">
+            <router-link class="header-link typography-link" :to="link.link">
               <base-icon :name="link.icon" />
               {{ link.name }}
             </router-link>
@@ -31,11 +31,11 @@ export default {
   data() {
     return {
       links: [
-        { name: "Профиль", icon: "profile" },
-        { name: "Рецензии", icon: "review" },
-        { name: "Кошелек", icon: "wallet" },
-        { name: "Настройки", icon: "settings" },
-        { name: "Выйти", icon: "logout" },
+        { link: "/", name: "Профиль", icon: "profile" },
+        { link: "/", name: "Рецензии", icon: "review" },
+        { link: "/", name: "Кошелек", icon: "wallet" },
+        { link: "/", name: "Настройки", icon: "settings" },
+        { link: "/", name: "Выйти", icon: "logout" },
       ],
     };
   },
@@ -45,25 +45,23 @@ export default {
 <style lang="sass" scoped>
 .header
   padding: 23px 0
-  background-color: #fff
+  background-color: $light
+  min-height: 75px
   +sm()
     padding: 0
+    min-height: initial
   &-menu
     +sm()
       display: none
   &-inner
-    display: flex
-    align-items: center
-    justify-content: space-between
+    +flex($jc: space-between)
   &-list
     gap: 30px
   &-link
     display: flex
     align-items: center
     gap: 10px
-    font-size: 16px
-    line-height: 19px
-    letter-spacing: -4%
+    font-weight: 500
   &-mobile-menu
     display: none
     position: relative
