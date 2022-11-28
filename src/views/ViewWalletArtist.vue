@@ -173,7 +173,8 @@ export default {
     width: 100%
     font-weight: 400 !important
   &-button
-    width: 100%
+    +xs()
+      width: 100%
 
 .w-payment
   &-title
