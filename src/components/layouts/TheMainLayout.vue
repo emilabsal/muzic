@@ -1,9 +1,11 @@
 <template>
-  <the-header />
-  <main>
-    <router-view></router-view>
-  </main>
-  <the-footer />
+  <div class="main-layout">
+    <the-header />
+    <main class="main-layout-content">
+      <router-view></router-view>
+    </main>
+    <the-footer />
+  </div>
 </template>
 
 <script>
@@ -17,3 +19,12 @@ export default {
   },
 };
 </script>
+
+<style lang="sass" scoped>
+.main-layout
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  &-content
+    flex-grow: 1
+</style>
